@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="marvelApp">
+<head>
+    <title>Marvel.com application</title>
+    <link href="webjars/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <script src="webjars/angularjs/1.2.9/angular.js" type="text/javascript"></script>
+    <script src="webjars/angularjs/1.2.9/angular-resource.js" type="text/javascript"></script>
+    <script src="webjars/angularjs/1.2.9/angular-route.js" type="text/javascript"></script>
+    <script src="api.js" type="text/javascript"></script>
+    <script src="controller.js" type="text/javascript"></script>
+</head>
+<body ng-controller="MainCtrl">
+<div role="navigation" class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand">Marvel App</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div ng-view></div>
+</div>
+</body>
+</html>
