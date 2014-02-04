@@ -12,16 +12,16 @@ marvelAppControllers.controller('CharactersListCtrl', function ($scope, MarvelSe
 
   $scope.search = function () {
     MarvelService.get({ "offset": $scope.paging.offset },
-      function (data) {
-        $scope.characters = data.results;
+      function (response) {
+        $scope.characters = response.data.results;
 
         $scope.paging = {
-          total: data.total,
-          limit: data.limit,
-          offset: data.offset,
-          count: data.count,
-          pages: Math.ceil(data.total / data.limit),
-          current: data.offset / data.limit + 1
+          total: response.data.total,
+          limit: response.data.limit,
+          offset: response.data.offset,
+          count: response.data.count,
+          pages: Math.ceil(response.data.total / response.data.limit),
+          current: response.data.offset / response.data.limit + 1
         }
       },
       function(response) { // in case of issues

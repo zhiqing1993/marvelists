@@ -1,7 +1,7 @@
 marvelAppControllers.controller('CharacterCtrl', function ($scope, $routeParams, MarvelService) {
   MarvelService.get({ id: $routeParams.id }, 
-    function (data) {
-      $scope.character = data.results[0];
+    function (response) {
+      $scope.character = response.data.results[0];
       $scope.columns = 0;
       if ($scope.character.comics.items.length > 0) $scope.columns++;
       if ($scope.character.series.items.length > 0) $scope.columns++;
