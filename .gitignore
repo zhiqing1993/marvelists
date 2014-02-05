@@ -1,4 +1,5 @@
 .idea
 target
 *.iml
+bower_components
 src/main/webapp/webjars
