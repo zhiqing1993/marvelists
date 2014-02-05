@@ -15,3 +15,5 @@ Before forking the project:
         "key": "<your_public_key>"
     }
     ```
+
+1. Call `bower install` to retrieve dependencies
